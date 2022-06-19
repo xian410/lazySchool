@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.management.mapper.RequiresMapper">
+    <resultMap id="SelectRequiresListResponse" type="com.example.demo.management.entity.response.SelectRequiresListResponse">
+        <result column="require_id" property="requireId"/>
+        <result column="login_id" property="loginId"/>
+        <result column="userName" property="userName"/>
+        <result column="head_pic_url" property="headPic"/>
+        <result column="type_id" property="typeId"/>
+        <result column="gender_limited" property="genderLimited"/>
+        <result column="name" property="requireName"/>
+        <result column="require_name" property="requireName"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <select id="selectAllRequires" resultMap="SelectRequiresListResponse">
+        select r.require_id, r.name, r.login_id, i.name userName,i.telephone, r.type_id,i.head_pic_url,
+        r.fees, r.start, r.destination,r.remark, r.create_time,r.gender_limited,r.deadline,r.detail
+        from requires r, information i, require_type t
+        <where>
+            r.login_id = i.login_id
+            and r.status = 0
+            and r.is_delete = 0
+            and r.type_id = t.type_id
+            <if test="selectRequiresRequest.start != null and selectRequiresRequest.start != ''">
+                and r.start like '%${selectRequiresRequest.start}%'
+            </if>
+            <if test="selectRequiresRequest.name != null and selectRequiresRequest.name != ''">
+                and r.name like '%${selectRequiresRequest.name}%'
+            </if>
+            <if test="selectRequiresRequest.destination != null and selectRequiresRequest.destination != ''">
+                and r.destination like '%${selectRequiresRequest.destination}%'
+            </if>
+            <if test="selectRequiresRequest.typeId != null and selectRequiresRequest.typeId != ''">
+                and r.type_id = #{selectRequiresRequest.typeId}
+            </if>
+        </where>
+        order by r.create_time desc
+    </select>
+
+    <select id="selectMyRequires"
+            resultMap="SelectRequiresListResponse">
+        select r.require_id, r.name, r.login_id, i.name userName,i.telephone, r.type_id,i.head_pic_url,
+        r.fees, r.start, r.destination,r.remark, r.create_time,r.gender_limited,r.deadline,r.detail
+        from requires r, information i, require_type t
+        <where>
+            r.login_id = i.login_id
+            and r.status = 0
+            and r.is_delete = 0
+            and r.type_id = t.type_id
+            <if test="loginId != null and loginId != ''">
+                and r.login_id = #{loginId}
+            </if>
+            <if test="selectRequiresRequest.start != null and selectRequiresRequest.start != ''">
+                and r.start like '%${selectRequiresRequest.start}%'
+            </if>
+            <if test="selectRequiresRequest.name != null and selectRequiresRequest.name != ''">
+                and r.name like '%${selectRequiresRequest.name}%'
+            </if>
+            <if test="selectRequiresRequest.destination != null and selectRequiresRequest.destination != ''">
+                and r.destination like '%${selectRequiresRequest.destination}%'
+            </if>
+            <if test="selectRequiresRequest.typeId != null and selectRequiresRequest.typeId != ''">
+                and r.type_id = #{selectRequiresRequest.typeId}
+            </if>
+        </where>
+        order by r.create_time desc
+    </select>
+
+    <select id="selectDeletedRequires"
+            resultMap="SelectRequiresListResponse">
+        select r.require_id, r.name, r.login_id, i.name userName,i.telephone, r.type_id,i.head_pic_url,
+        r.fees, r.start, r.destination,r.remark, r.create_time,r.gender_limited,r.deadline,r.detail
+        from requires r, information i, require_type t
+        <where>
+            r.login_id = i.login_id
+            and r.status = 0
+            and r.type_id = t.type_id
+            and r.is_delete = 1
+            <if test="loginId != null and loginId != ''">
+                and r.login_id = #{loginId}
+            </if>
+            <if test="selectRequiresRequest.start != null and selectRequiresRequest.start != ''">
+                and r.start like '%${selectRequiresRequest.start}%'
+            </if>
+            <if test="selectRequiresRequest.name != null and selectRequiresRequest.name != ''">
+                and r.name like '%${selectRequiresRequest.name}%'
+            </if>
+            <if test="selectRequiresRequest.destination != null and selectRequiresRequest.destination != ''">
+                and r.destination like '%${selectRequiresRequest.destination}%'
+            </if>
+            <if test="selectRequiresRequest.typeId != null and selectRequiresRequest.typeId != ''">
+                and r.type_id = #{selectRequiresRequest.typeId}
+            </if>
+        </where>
+        order by r.create_time desc
+    </select>
+
+
+    <select id="getRequireName" resultType="java.lang.String">
+        select name from requires where require_id = #{require_id}
+    </select>
+</mapper>

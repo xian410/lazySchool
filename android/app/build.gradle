@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.lazysch"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk{
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding {
+        enabled = true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //implementation files('libs\\AMap3DMap_9.2.1_AMapSearch_9.2.0_AMapLocation_6.1.0_20220506.jar')//高德
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.7.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    //glide依赖
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+//recycleView依赖
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //Volley依赖
+    implementation 'com.android.volley:volley:1.2.1'
+    //RecyclerView依赖
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+
+    //support项目
+    implementation 'com.github.xuexiangjys:XUI:1.0.9-support'
+
+    //androidx项目
+    implementation 'com.github.xuexiangjys:XUI:1.1.9'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    //处理json项目
+    implementation 'com.google.code.gson:gson:2.7'
+    //谷歌下拉刷新
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    //BindView
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    //EventButs
+    implementation 'org.greenrobot:eventbus:3.1.1'
+}

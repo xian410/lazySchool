@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#fff"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/tvBaiduJuli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/greywhite"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/seach_cancel"
+            android:layout_width="60dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/translucent_edit"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/seach_sure"
+            android:layout_width="60dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/translucent_edit"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/seach_name"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_toLeftOf="@id/seach_sure"
+            android:layout_toRightOf="@id/seach_cancel"
+            android:background="@drawable/translucent_edit"
+            android:completionThreshold="1"
+            android:drawableLeft="@drawable/pick"
+            android:drawablePadding="5dp"
+            android:dropDownVerticalOffset="1.0dip"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:inputType="text|textAutoComplete"
+            android:maxLength="20"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:textColor="#979EA9"
+            android:textColorHint="#979EA9"
+            android:textSize="14.0sp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapview"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+</RelativeLayout>

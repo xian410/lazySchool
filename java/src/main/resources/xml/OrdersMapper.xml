@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.management.mapper.OrdersMapper">
+
+    <resultMap id="SelectOrdersResponse" type="com.example.demo.management.entity.response.SelectOrdersResponse">
+        <result column="order_id" property="orderId"/>
+        <result column="require_id" property="requireId"/>
+        <result column="gName" property="requireName"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="Cname" property="customerName"/>
+        <result column="CGender" property="customerGender"/>
+        <result column="CCol" property="customerColl"/>
+        <result column="CTel" property="customerTel"/>
+        <result column="CHead" property="customerHeadPic"/>
+        <result column="type_id" property="typeId"/>
+        <result column="TName" property="typeName"/>
+        <result column="driver_id" property="driverId"/>
+        <result column="dName" property="driverName"/>
+        <result column="DHead" property="driverHeadPic"/>
+        <result column="DTel" property="driverTel"/>
+        <result column="DGender" property="driverGender"/>
+        <result column="DCol" property="driverColl"/>
+        <result column="Create_time" property="createTime"/>
+        <result column="state" property="status"/>
+        <result column="is_delete" property="isDelete"/>
+    </resultMap>
+
+
+    <select id="selectDriverOrders"
+            resultMap="SelectOrdersResponse" >
+        select o.order_id, o.require_id, r.name gName, r.type_id, t.name Tname, o.customer_id, i.name Cname,
+        i.head_pic_url Chead,i.gender CGender,i.telephone CTel,i.college CCol,r.start, r.destination, o.state, o.driver_id,
+        j.name dName,j.head_pic_url Dhead,j.gender DGender,j.telephone Dtel,j.college DCol,r.fees,r.deadline,r.remark cRemark,
+        o.create_time,j.telephone, j.gender,o.is_delete,r.detail
+        from orders o, requires r, information i, information j, require_type t
+        <where>
+            o.require_id = r.require_id
+            and r.type_id = t.type_id
+            and o.customer_id = i.login_id
+            and o.driver_id = j.login_id
+            and o.driver_id = #{loginId}
+            <if test="selectOrdersRequest.status == -1">
+
+            </if>
+            <if test="selectOrdersRequest.status == 0">
+                and o.state = 0
+            </if>
+            <if test="selectOrdersRequest.status == 1">
+                and o.state = 1
+            </if>
+            <if test="selectOrdersRequest.status == 2">
+                and o.state = 2
+            </if>
+            order by o.create_time desc
+        </where>
+    </select>
+
+
+    <select id="selectCustomerOrders"
+            resultMap="SelectOrdersResponse">
+        select o.order_id, o.require_id, r.name gName, r.type_id, t.name Tname, o.customer_id, i.name Cname,
+        i.head_pic_url Chead,i.gender CGender,i.telephone CTel,i.college CCol,r.start, r.destination, o.state, o.driver_id,
+        j.name dName,j.head_pic_url Dhead,j.gender DGender,j.telephone Dtel,j.college DCol,r.fees,r.deadline,r.remark cRemark,
+        o.create_time,j.telephone, j.gender,o.is_delete,r.detail
+        from orders o, requires r, information i, information j, require_type t
+        <where>
+            o.require_id = r.require_id
+            and r.type_id = t.type_id
+            and o.customer_id = i.login_id
+            and o.driver_id = j.login_id
+            and o.customer_id = #{loginId}
+            <if test="selectOrdersRequest.status == -1">
+
+            </if>
+            <if test="selectOrdersRequest.status == 0">
+                and o.state = 0
+            </if>
+            <if test="selectOrdersRequest.status == 1">
+                and o.state = 1
+            </if>
+            <if test="selectOrdersRequest.status == 2">
+                and o.state = 2
+            </if>
+            order by o.create_time desc
+        </where></select>
+
+    <!--    IPage<SelectOrdersResponse> selectAllOrders(IPage<SelectOrdersResponse> queryPageRequest,-->
+    <!--    @Param("selectOrdersRequest") SelectOrdersRequest selectOrdersRequest);-->
+    <select id="selectAllOrders"
+            resultMap="SelectOrdersResponse">
+        select o.order_id, o.require_id, r.name gName, r.type_id, t.name Tname, o.customer_id, i.name Cname,
+        i.head_pic_url Chead,i.gender CGender,i.telephone CTel,i.college CCol,r.start, r.destination, o.state, o.driver_id,
+        j.name dName,j.head_pic_url Dhead,j.gender DGender,j.telephone Dtel,j.college DCol,r.fees,r.deadline,r.remark cRemark,
+        o.create_time,j.telephone, j.gender,o.is_delete,r.detail
+        from orders o, requires r, information i, information j, require_type t
+        <where>
+            o.require_id = r.require_id
+            and r.type_id = t.type_id
+            and o.customer_id = i.login_id
+            and o.driver_id = j.login_id
+            <if test="selectOrdersRequest.status == -1">
+
+            </if>
+            <if test="selectOrdersRequest.status == 0">
+                and o.state = 0
+            </if>
+            <if test="selectOrdersRequest.status == 1">
+                and o.state = 1
+            </if>
+            <if test="selectOrdersRequest.status == 2">
+                and o.state = 2
+            </if>
+        </where></select>
+</mapper>

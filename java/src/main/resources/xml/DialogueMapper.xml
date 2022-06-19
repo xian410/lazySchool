@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.management.mapper.DialogueMapper">
+
+    <resultMap id="SelectDialogResponse" type="com.example.demo.management.entity.response.SelectDialogResponse">
+        <result column="dialogue_id" property="dialogueId"/>
+        <result column="login_id" property="loginId"/>
+        <result column="to_user_id" property="toUserId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="is_delete" property="isDelete"/>
+    </resultMap>
+
+
+    <select id="selectDialogs" resultMap="SelectDialogResponse">
+        select dialogue_id,login_id,to_user_id,details,status,create_time,is_delete
+        from dialogue
+        where login_id = #{loginId}
+        or to_user_id = #{loginId}
+        order by create_time desc
+    </select>
+</mapper>

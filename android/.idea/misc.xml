@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/drawable/bottom_homepage.xml" value="0.1505" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/drawable/checkbox_password.xml" value="0.1505" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/drawable/translucent_button.xml" value="0.1835" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/drawable/translucent_edit.xml" value="0.1835" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/layout/activity_sign_up.xml" value="0.25364583333333335" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/layout/register.xml" value="0.25364583333333335" />
+        <entry key="..\:/bigexperiment3.20/lazeSchool/android/app/src/main/res/layout/sign_in.xml" value="0.264" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/background_buy.xml" value="0.144" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/bg_notify.xml" value="0.1635" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/bg_order_type.xml" value="0.144" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/bottom_homepage.xml" value="0.144" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/bottom_talking.xml" value="0.1855" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/charge_button.xml" value="0.1685" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/charge_money.xml" value="0.1735" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/checkbox_password.xml" value="0.165" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/confirm.xml" value="0.1395" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1545" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/logo_text_background.xml" value="0.165" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/place_order.xml" value="0.1315" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/select_bck.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/top_all.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/translucent_button.xml" value="0.1735" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/translucent_edit.xml" value="0.1315" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/drawable/translucent_information.xml" value="0.1735" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_botton_navition.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_botton_navition_driver.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_complete_information.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_listpage_driver.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_listpage_main.xml" value="0.176" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_main_driver.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_map.xml" value="0.1675929884566054" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_message.xml" value="0.15647712697734073" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_orders_list.xml" value="0.13595553655408293" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_per_information.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_personal_information.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_requires_list.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_send_require.xml" value="0.264" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_sign_in.xml" value="0.261455525606469" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_sign_up.xml" value="0.15572916666666667" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_talking.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_to_take_requires.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/bottom_layout.xml" value="0.1671875" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/dialog_money_input.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/dialog_show_driversInformatoin.xml" value="0.14407866609662248" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/dialog_show_drivers_informatoin.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_blank.xml" value="0.14719202898550723" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_blank2.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_blank_listpage.xml" value="0.15647712697734073" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_driverdashboard.xml" value="0.128" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_notifications.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_personal.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/fragment_take_requires.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_customer_requires.xml" value="0.264" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_driver_orders.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_message.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_orders.xml" value="0.264" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_orders_driver.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_requires.xml" value="0.2" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_requires_to_pay.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/item_requires_to_take.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/layout_dialog.xml" value="0.16" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/layout_map.xml" value="0.1613780598368087" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/layout_no_data.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/layout_orders_item.xml" value="0.264" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/layout_requires_item.xml" value="0.176" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/layout_requires_item_customer.xml" value="0.264" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/per_information.xml" value="0.176" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/personalpage.xml" value="0.20697463768115942" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/top_listpage.xml" value="0.1" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/layout/top_listpage_drivers.xml" value="0.4" />
+        <entry key="..\:/lazeSchool/android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20820863616930313" />
+        <entry key="..\:/lazySch/app/src/main/res/drawable/bottom_homepage.xml" value="0.1345" />
+        <entry key="..\:/lazySch/app/src/main/res/drawable/bottom_list.xml" value="0.1345" />
+        <entry key="..\:/lazySch/app/src/main/res/drawable/bottom_personal.xml" value="0.1345" />
+        <entry key="..\:/lazySch/app/src/main/res/drawable/bottom_talking.xml" value="0.1345" />
+        <entry key="..\:/lazySch/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
+        <entry key="..\:/lazySch/app/src/main/res/layout/bottom_layout.xml" value="0.1" />
+        <entry key="..\:/lazySch/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.176" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

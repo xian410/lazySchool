@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Main-Class: com.example.demo.DemoApplication
+Class-Path: knife4j-core-2.0.2.jar spring-jdbc-5.3.12.jar jsqlparser-3.2
+ .jar spring-expression-5.3.12.jar snakeyaml-1.28.jar jakarta.annotation
+ -api-1.3.5.jar jackson-module-parameter-names-2.12.5.jar spring-core-5.
+ 3.12.jar spring-jcl-5.3.12.jar spring-tx-5.3.12.jar spring-webmvc-5.3.1
+ 2.jar springfox-swagger-common-2.9.2.jar spring-boot-starter-json-2.5.6
+ .jar hibernate-validator-6.2.0.Final.jar velocity-engine-core-2.2.jar m
+ ybatis-plus-3.4.1.jar knife4j-spring-boot-starter-2.0.2.jar gson-2.8.8.
+ jar commons-lang3-3.12.0.jar classmate-1.5.1.jar logback-classic-1.2.6.
+ jar opentracing-util-0.33.0.jar swagger-models-1.5.22.jar spring-contex
+ t-5.3.12.jar jackson-datatype-jsr310-2.12.5.jar tomcat-embed-websocket-
+ 9.0.54.jar spring-boot-2.5.6.jar springfox-core-2.9.2.jar spring-plugin
+ -core-1.2.0.RELEASE.jar opentracing-noop-0.33.0.jar jackson-datatype-jd
+ k8-2.12.5.jar tomcat-embed-core-9.0.54.jar knife4j-spring-2.0.2.jar byt
+ e-buddy-1.10.22.jar jackson-databind-2.12.5.jar jackson-core-2.12.5.jar
+  knife4j-spring-ui-2.0.2.jar mybatis-plus-generator-3.4.1.jar knife4j-a
+ nnotations-2.0.2.jar spring-plugin-metadata-1.2.0.RELEASE.jar spring-bo
+ ot-autoconfigure-2.5.6.jar aspectjweaver-1.9.6.jar swagger-annotations-
+ 1.5.22.jar spring-boot-starter-logging-2.5.6.jar spring-web-5.3.12.jar 
+ mybatis-plus-extension-3.4.1.jar mybatis-3.5.6.jar mybatis-plus-core-3.
+ 4.1.jar mybatis-spring-2.0.5.jar commons-logging-1.2.jar commons-codec-
+ 1.15.jar opentracing-api-0.33.0.jar mapstruct-1.2.0.Final.jar mybatis-p
+ lus-boot-starter-3.4.1.jar jboss-logging-3.4.2.Final.jar log4j-api-2.14
+ .1.jar jaxb-api-2.3.0.jar springfox-swagger2-2.9.2.jar slf4j-api-1.7.32
+ .jar jackson-annotations-2.12.5.jar spring-boot-starter-web-2.5.6.jar l
+ og4j-to-slf4j-2.14.1.jar spring-boot-starter-jdbc-2.5.6.jar druid-1.2.4
+ .jar javassist-3.25.0-GA.jar jakarta.validation-api-2.0.2.jar ini4j-0.5
+ .4.jar spring-aop-5.3.12.jar mysql-connector-java-8.0.27.jar tomcat-emb
+ ed-el-9.0.54.jar spring-boot-starter-validation-2.5.6.jar logback-core-
+ 1.2.6.jar spring-boot-starter-2.5.6.jar springfox-schema-2.9.2.jar spri
+ ng-boot-starter-tomcat-2.5.6.jar springfox-spring-web-2.9.2.jar aliyun-
+ java-sdk-core-4.5.1.jar knife4j-spring-boot-autoconfigure-2.0.2.jar spr
+ ing-beans-5.3.12.jar springfox-spi-2.9.2.jar httpclient-4.5.13.jar myba
+ tis-plus-annotation-3.4.1.jar springfox-bean-validators-2.9.2.jar Hikar
+ iCP-4.0.3.jar druid-spring-boot-starter-1.2.4.jar org.jacoco.agent-0.8.
+ 5-runtime.jar javax.annotation-api-1.3.2.jar httpcore-4.4.14.jar lombok
+ -1.18.22.jar guava-20.0.jar jul-to-slf4j-1.7.32.jar
+

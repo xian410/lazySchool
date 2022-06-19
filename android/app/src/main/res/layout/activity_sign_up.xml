@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout1_sign_up"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/LogoImage_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LogoImage_sign_up"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="易校园·注册"
+            android:textColor="#808080"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_sign_up"
+            android:orientation="vertical">
+
+            <!--手机号-->
+            <LinearLayout
+                android:id="@+id/LinearLayout_sing_up_tel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edittext_sign_up_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="42dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="请输入手机号"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <!--验证码-->
+            <LinearLayout
+                android:id="@+id/LinearLayout_sing_up_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edittext_sign_up_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="请输入验证码"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/button_sign_up_getCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="42dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/translucent_button"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <!--密码-->
+            <RelativeLayout
+                android:id="@+id/LinearLayout_sing_up_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edittext_sign_up_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="42dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="请输入密码"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sign_up_password"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/checkbox_password"
+                    android:button="@null" />
+            </RelativeLayout>
+
+            <!--确认密码-->
+            <RelativeLayout
+                android:id="@+id/LinearLayout_sing_up_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edittext_sing_up_password_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="42dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="确认密码"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sing_up_password_confirm"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/checkbox_password"
+                    android:button="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearLayout_sign_up_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <!--注册按钮-->
+                <Button
+                    android:id="@+id/Button_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/translucent_button"
+                    android:padding="6dp"
+                    android:text="注   册"
+
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:gravity="right"
+                android:orientation="vertical">
+                <!--点击注册-->
+                <Button
+                    android:id="@+id/button_sign_up_to_sign_in"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@null"
+                    android:text="已有账号？点击登录"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

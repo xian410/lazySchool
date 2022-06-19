@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/greywhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:src="@drawable/left_arrow"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/pinkred"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="随便买"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_buy">
+
+        <EditText
+            android:id="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top"
+            android:minLines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:layout_margin="20dp"
+            android:hint="点击填写购买物品信息，越详细越好哦，如果需要的话，请在此输入详细地址如
+            西三宿舍楼A512"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_buy"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/buy_address"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/pick"
+            android:drawablePadding="10dp"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:hint="点击选择购买地址"/>
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/greywhite"/>
+
+        <TextView
+            android:id="@+id/receive"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/address"
+            android:drawablePadding="10dp"
+            android:textSize="16dp"
+            android:padding="15dp"
+            android:hint="点击填写收货信息"/>
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/greywhite"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_buy"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="16dp">
+            <ImageView
+                android:id="@+id/time_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/time"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/time_img"
+                android:text="帮买时间"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/time_picker_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="立即发单"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/time"
+                    android:background="@color/white"
+                    android:src="@drawable/more" />
+            </RelativeLayout>
+        </RelativeLayout>
+<!--        优惠券和预购金额-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="16dp">
+            <ImageView
+                android:id="@+id/coupon_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/coupon_pic"/>
+
+            <TextView
+                android:id="@+id/coupon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/coupon_pic"
+                android:layout_marginLeft="10dp"
+                android:text="优惠券"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/coupon_text"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/more"/>
+
+            <RelativeLayout
+                android:id="@+id/money_div"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/money_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/money_pic" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/money_pic"
+                    android:text="预购金额"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/to_check_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/money"
+                    android:background="@color/white"
+                    android:src="@drawable/more" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="是否限定性别:"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pinkred"
+            android:textSize="12dp" />
+
+        <Spinner
+            android:id="@+id/is_gender"
+            style="@style/select_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv1"
+            android:entries="@array/genderLimit"
+            android:textAlignment="center" />
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/place_order"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="下单"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

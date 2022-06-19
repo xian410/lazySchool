@@ -1,0 +1,84 @@
+server:
+  port: 8084
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:xml/*Mapper.xml
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_null
+#      logic-delete-field: isDelete #默认deleted
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
+#      id-type: auto
+spring:
+  datasource:
+    ## 连接池类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 数据源基本配置
+      username: ljx
+      password: 12345678
+      url: jdbc:mysql://8.141.146.38:3306/lazy_school?useUnicode=true&charaterEncoding=utf-8&SSL=true&serverTimezone=Asia/Shanghai
+      driverClassName: com.mysql.cj.jdbc.Driver
+
+      # druid连接池其他配置
+      ## 初始化连接数
+      initialSize: 1
+      ## 最小连接数
+      minIdle: 1
+      ## 最大会话数
+      maxActive: 20
+      ## 连接超时，ms。超时则认为无可用连接
+      maxWait: 3000
+      ## 检查空闲连接的频率，ms
+      timeBetweenEvictionRunsMillis: 60000
+      ## 空闲连接最小生存周期，ms。超时则下次检查时被回收
+      minEvictableIdleTimeMillis: 300000
+      ## 检查连接是否可用的语句
+      validationQuery: SELECT 1 FROM DUAL
+      ## 请求连接时分配连接前先检查该连接是否有效
+      testWhileIdle: true
+      ## 请求连接时，进行有效性检查（影响性能）
+      testOnBorrow: false
+      ## 返还连接时，进行有效性检查（影响性能）
+      testOnReturn: false
+      ## 缓存preparedStatement发起的sql
+      poolPreparedStatements: true
+      ## 每个连接最多缓存多少个SQL
+      maxPoolPreparedStatementPerConnectionSize: 20
+      ## 配置监控内容
+      filter:
+        stat:
+          enabled: true
+          dbType: mysql
+          logSlowSql: true
+          slowSqlMillis: 2000
+      ## 配置监控web服务
+      webStatFilter:
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      statViewServlet:
+        enabled: true
+        ### 监控服务路径
+        urlPattern: /druid/*
+        ### 是否允许重置数据
+        resetEnable: true
+        ### 登录信息
+        loginUsername: test
+        loginPassword: test
+logging:
+  level:
+    com.example.demo.mapper: debug
+#file:
+#  pathPattern: /file/**
+#  location: E:/IDEA/classblog/java/upload/
+#  url: http://localhost:8081/file/
+
+file:
+  pathPattern: /file/**
+  location: /usr/java/upload/
+  url: http://8.141.146.38:8081/file/

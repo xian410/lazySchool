@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.management.mapper.MessageMapper">
+
+    <resultMap id="SelectMessageResponse" type="com.example.demo.management.entity.response.SelectMessageResponse">
+        <result column="message_id" property="messageId"/>
+        <result column="good_id" property="goodId"/>
+        <result column="login_id" property="loginId"/>
+        <result column="from_user_id" property="fromUserId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="is_delete" property="isDelete"/>
+    </resultMap>
+
+
+    <select id="selectMessages" resultMap="SelectMessageResponse">
+        select message_id,good_id,login_id,status,from_user_id,create_time,is_delete
+        from message
+        where login_id = #{loginId}
+        and is_delete = false
+        order by create_time desc
+    </select>
+
+</mapper>
