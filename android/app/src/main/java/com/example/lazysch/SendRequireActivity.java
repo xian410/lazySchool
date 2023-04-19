@@ -24,6 +24,7 @@ import com.example.lazysch.utils.Common;
 import com.example.lazysch.utils.KeyValues;
 import com.example.lazysch.utils.MyActivity;
 import com.example.lazysch.utils.NetUtil;
+import com.example.lazysch.utils.ShowImageUtils;
 import com.example.lazysch.utils.TimeUtil;
 import com.example.lazysch.utils.ToastUtil;
 
@@ -39,12 +40,14 @@ public class SendRequireActivity extends MyActivity {
 
     private TimePickerDialog timeDialog;
     private int hour = 0,minute = 0;
-    private TextView tv_time,buy_address,receive;
-    private EditText details;
+    private TextView tv_time;
+    private EditText details,buy_address,receive;
     private TextView money;
     private Spinner isGender;
     private RelativeLayout money_div;
     private String getStringtext;
+
+    private  String typeName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,15 +55,17 @@ public class SendRequireActivity extends MyActivity {
         setContentView(R.layout.activity_send_require);
 
         //上方服务类型的文本框显示
-        TextView set_message = findViewById(R.id.title);
         SharedPreferences mSharedPreferences = getSharedPreferences("message_data" , MODE_PRIVATE);
         getStringtext = mSharedPreferences.getString("message",null);
-        set_message.setText(getStringtext);//结束
+        getTypeName();
 
         KeyValues keyValues = new KeyValues();
         details = (EditText) findViewById(R.id.details);
-        buy_address = (TextView) findViewById(R.id.buy_address);
-        receive = (TextView) findViewById(R.id.receive);
+//        buy_address = (TextView) findViewById(R.id.buy_address);
+//        receive = (TextView) findViewById(R.id.receive);
+        buy_address = (EditText) findViewById(R.id.buy_address);
+        receive = (EditText) findViewById(R.id.receive);
+
         isGender = (Spinner) findViewById(R.id.is_gender);
         money = (TextView) findViewById(R.id.money);
 
@@ -132,14 +137,14 @@ public class SendRequireActivity extends MyActivity {
                         && Common.isNumber(money_input)) {
                     JSONObject params = new JSONObject();
                     try {
-                        params.put("name",getStringtext);
+                        params.put("name",typeName);
                         params.put("detail",details_text);
                         params.put("start",buy_address_text);
                         params.put("destination",receive_text);
                         params.put("deadline",time);
                         params.put("fees",Integer.parseInt(money_input));
                         params.put("remark",genderLimit);
-                        params.put("typeId","004");
+                        params.put("typeId",getStringtext);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -195,5 +200,26 @@ public class SendRequireActivity extends MyActivity {
                 receive.setText(data.getExtras().getString("address"));
             }
         }
+    }
+
+    public void getTypeName() {
+
+        TextView set_message = findViewById(R.id.title);
+        JSONObject params = new JSONObject();
+        try {
+            params.put("typeId",getStringtext);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+        String url = Apiurls.server+Apiurls.getRequireType;
+
+        NetUtil.NetListenerT listenerT = new NetUtil.NetListenerT() {
+            @Override
+            public <T> void onResponse(JSONObject response) throws JSONException {
+                typeName = response.getString("data");
+                set_message.setText(typeName);//结束
+            }
+        };
+        NetUtil.requestSimple(getApplicationContext(),NetUtil.POST,url,params,listenerT);
     }
 }

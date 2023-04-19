@@ -19,7 +19,7 @@ import com.example.lazysch.R;
 import com.example.lazysch.SendRequireActivity;
 import com.example.lazysch.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class  HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     //定义八个服务的图片
@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         express.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "快递");
+            message_editor.putString("message", "1");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
 
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "带饭");
+            message_editor.putString("message", "2");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment {
         print.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "打印");
+            message_editor.putString("message", "3");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -80,7 +80,7 @@ public class HomeFragment extends Fragment {
         carry.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "搬运");
+            message_editor.putString("message", "4");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -90,7 +90,7 @@ public class HomeFragment extends Fragment {
         get.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "代取");
+            message_editor.putString("message", "5");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -100,7 +100,7 @@ public class HomeFragment extends Fragment {
         buy.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "代购");
+            message_editor.putString("message", "6");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -110,7 +110,7 @@ public class HomeFragment extends Fragment {
         handle.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "代办");
+            message_editor.putString("message", "7");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -120,7 +120,7 @@ public class HomeFragment extends Fragment {
         elsething.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "其他");
+            message_editor.putString("message", "8");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);
@@ -130,7 +130,7 @@ public class HomeFragment extends Fragment {
         to_details.setOnClickListener(view -> {
             mSharedPreferences = root.getContext().getSharedPreferences("message_data", MODE_PRIVATE);
             SharedPreferences.Editor message_editor = mSharedPreferences.edit();
-            message_editor.putString("message", "其他");
+            message_editor.putString("message", "8");
             message_editor.commit();
 
             Intent intent = new Intent(root.getContext(), SendRequireActivity.class);

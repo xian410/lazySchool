@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2022-04-15
  */
 public interface RequireTypeService extends IService<RequireType> {
-
+    String getRequireType(String typeId);
 }

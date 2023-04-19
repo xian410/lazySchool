@@ -1,8 +1,9 @@
 package com.example.lazysch.utils;
 
 public class Apiurls {
-   //服务器地址
-   public static final String server = "http://localhost:8081";
+
+    //服务器地址
+    public static final String server = "http://192.168.2.230:8084";
 
 
     //登录
@@ -74,4 +75,7 @@ public class Apiurls {
 
     //配送人员赚的钱
     public static final String profile = "/management/account/profile";
+
+    //需求类型
+    public static final String getRequireType = "/management/require-type/getRequireType";
 }

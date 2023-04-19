@@ -6,6 +6,8 @@ import com.example.demo.management.service.RequireTypeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * <p>
  * 需求类型表 服务实现类
@@ -17,4 +19,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class RequireTypeServiceImpl extends ServiceImpl<RequireTypeMapper, RequireType> implements RequireTypeService {
 
+    @Resource
+    RequireTypeMapper requireTypeMapper;
+
+    @Override
+    public String getRequireType(String typeId) {
+        System.out.println(typeId);
+        String name = requireTypeMapper.selectType(typeId);
+        return name;
+    }
 }

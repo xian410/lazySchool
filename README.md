@@ -10,4 +10,5 @@
     服务器地址的localhost改为本主机ip（因为androidstudio是用虚拟机运行的，所以localhost没有用）
     bilibili视频链接：https://www.bilibili.com/video/BV1AY411r7Ps/?spm_id_from=333.999.0.0
     
-项目简介：本项目为河北工业大学大三移动应用开大大实验，技术栈为android+springboot+mysql，实现了登录注册，发布订单，骑手接单，消息提醒等功能，引入了高德地图sdk，使用有问题者可以改为正常输入，不过仍有许多接口功能没有实现，有意者可以下下来摆弄一下，欢迎提issue。
+项目简介：本项目为技术栈为android+springboot+mysql，实现了登录注册，发布订单，骑手接单，消息提醒等功能，引入了高德地图sdk，使用有问题者可以改为正常输入，不过仍有许多接口功能没有实现，有意者可以下下来摆弄一下，欢迎提issue。
+注：地图功能暂时失效，改为普通输入

@@ -67,11 +67,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/title_activity_botton_navition" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".RecycleView.MessageActivity"
@@ -92,6 +88,11 @@
         <activity
             android:name=".SignInActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".PerInformationActivity"

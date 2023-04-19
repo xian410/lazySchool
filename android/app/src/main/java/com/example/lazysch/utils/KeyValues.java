@@ -7,6 +7,8 @@ public class KeyValues {
     private Map<String,Integer> genderLimitSelect;
     private Map<String,String> college;
 
+    private Map<String,String> requireType;
+
 
     public KeyValues() {
         genderLimitSelect = new HashMap<>();
@@ -32,6 +34,7 @@ public class KeyValues {
         college.put("14","人文与法律学院");
         college.put("15","生命科学与健康工程学院");
         college.put("16","国际教育学院");
+
     }
 
     public String getCollege(String key) {

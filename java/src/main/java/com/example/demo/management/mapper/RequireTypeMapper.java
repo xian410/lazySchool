@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2022-04-15
  */
 public interface RequireTypeMapper extends BaseMapper<RequireType> {
-
+    String selectType(String typeId);
 }

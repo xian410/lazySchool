@@ -38,7 +38,7 @@ public class AutoMapper {
         //设置数据源FataSource
         DataSourceConfig ds = new DataSourceConfig();
         // 注意：填入application.yml文件中的配置即可
-        ds.setUrl("jdbc:mysql://8.141.146.38:3306/lazy_school?useUnicode=true&charaterEncoding=utf-8&SSL=true&serverTimezone=Asia/Shanghai");
+        ds.setUrl("jdbc:mysql://localhost:3306/lazy_school?useUnicode=true&charaterEncoding=utf-8&SSL=true&serverTimezone=Asia/Shanghai");
         // dsc.setSchemaName("public");
         ds.setDriverName("com.mysql.cj.jdbc.Driver");
         ds.setUsername("ljx");

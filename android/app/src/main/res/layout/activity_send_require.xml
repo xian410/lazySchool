@@ -60,17 +60,17 @@
         android:orientation="vertical"
         android:layout_marginTop="15dp">
 
-        <TextView
+        <EditText
             android:id="@+id/buy_address"
-            android:background="@null"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
             android:drawableLeft="@drawable/pick"
             android:drawablePadding="10dp"
-            android:textSize="16dp"
-            android:layout_marginTop="15dp"
+            android:hint="点击选择购买地址"
             android:padding="15dp"
-            android:hint="点击选择购买地址"/>
+            android:textSize="16dp" />
 
         <View
             android:layout_width="350dp"
@@ -78,7 +78,7 @@
             android:layout_gravity="center"
             android:background="@color/greywhite"/>
 
-        <TextView
+        <EditText
             android:id="@+id/receive"
             android:background="@null"
             android:layout_width="match_parent"

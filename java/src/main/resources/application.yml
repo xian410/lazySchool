@@ -19,9 +19,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       # 数据源基本配置
-      username: ljx
+      username: root
       password: 12345678
-      url: jdbc:mysql://8.141.146.38:3306/lazy_school?useUnicode=true&charaterEncoding=utf-8&SSL=true&serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://localhost:3306/lazy_school?useUnicode=true&charaterEncoding=utf-8&SSL=true&serverTimezone=Asia/Shanghai
       driverClassName: com.mysql.cj.jdbc.Driver
 
       # druid连接池其他配置

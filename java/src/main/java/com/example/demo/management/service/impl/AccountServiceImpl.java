@@ -161,6 +161,9 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
     @Override
     public Float profile(LoginUser loginUser) {
         Float profile = accountMapper.getProfile(loginUser.getLoginId());
+        if(profile == null) {
+            return 0.0F;
+        }
         return profile;
     }
 

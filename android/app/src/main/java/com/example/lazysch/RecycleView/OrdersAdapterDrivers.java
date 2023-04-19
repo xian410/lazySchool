@@ -152,7 +152,7 @@ public class OrdersAdapterDrivers extends RecyclerView.Adapter<OrdersAdapterDriv
             String time1 = arr[0]+"日  "+arr[1];
             holder.deadline.setText(time1);
             holder.phone.setText(data.getString( "customerId"));
-            holder.title.setText("帮我买-"+data.getString( "requireName"));
+            holder.title.setText(data.getString( "requireName"));
 
             this.details = data.getString( "detail");
         } catch (JSONException e) {
