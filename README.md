@@ -1,5 +1,5 @@
 # lazySchool
-##河北工业大学-移动应用开发大实验-校园跑腿app易校园
+##河北工业大学-毕设-校园跑腿app易校园
 
 使用操作：
     1.android文件通过android studio打开，java文件通过idea打开
